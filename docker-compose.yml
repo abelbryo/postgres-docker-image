@@ -2,14 +2,12 @@ version: '2'
 
 services:
 
-    db:
-        build: ./
-        container_name: database
-        # image: postgres
-        # restart: always
-        environment:
-            POSTGRES_DB: digimaa_db
-            POSTGRES_USER: digimaa_user
-            POSTGRES_PASSWORD: digimaa_pass
-        ports:
-            - 5432:5432
+  db:
+    build: ./
+    container_name: database
+    environment:
+      POSTGRES_DB: dbname
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    ports:
+      - 5432:5432
